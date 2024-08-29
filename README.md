@@ -250,7 +250,7 @@ Após iniciar o servidor, acesse a URL onde o Swagger foi configurado (por exemp
 
 O Swagger é uma excelente ferramenta para criar documentação interativa e explorar APIs. Integrar o Swagger no NestJS envolve a instalação dos pacotes necessários, configuração no arquivo `main.ts`, e o uso de decoradores para documentar endpoints e DTOs. Isso proporciona uma maneira visual e interativa para desenvolvedores interagirem com a API, o que pode ser especialmente útil durante o desenvolvimento e testes.
 
-![Demonstração Swagger](../NestShopPro/src/public/img/swagger.gif)
+![Demonstração Swagger](https://github.com/jeniferplacido/NestShopPro/blob/main/src/public/img/swagger.gif)
 
 ---
 # 🛤️ Railway
