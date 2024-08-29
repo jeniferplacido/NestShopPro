@@ -1,59 +1,63 @@
-### O que é um Ambiente?
+# 🌍 **O que é um Ambiente?**
 
 **Ambiente** em tecnologia refere-se ao conjunto de recursos, configurações e condições em que um software é executado ou testado. Cada ambiente é configurado de forma diferente para atender a necessidades específicas durante o ciclo de vida do desenvolvimento e operação de software.
 
-#### Tipos de Ambientes
+### 🔄 **Tipos de Ambientes**
 
-1. **Ambiente de Desenvolvimento:**
+1. **👩‍💻 Ambiente de Desenvolvimento:**
    - **O que é:** O ambiente onde os desenvolvedores criam e testam o código do software.
    - **Características:**
      - Configurações que permitem a edição e depuração do código.
      - Pode usar dados fictícios ou limitados.
      - Normalmente acessível apenas para a equipe de desenvolvimento.
 
-2. **Ambiente de Homologação:**
+2. **🔍 Ambiente de Homologação:**
    - **O que é:** O ambiente onde o software é testado antes de ser lançado para o público. É uma réplica do ambiente de produção.
    - **Características:**
      - Configurado para simular o ambiente de produção o mais próximo possível.
      - Usado para testes finais e validações.
      - Acesso para testes e avaliação de qualidade.
 
-3. **Ambiente de Produção:**
+3. **🚀 Ambiente de Produção:**
    - **O que é:** O ambiente onde o software está disponível para os usuários finais. É o "ambiente ao vivo".
    - **Características:**
      - Configurado para ser altamente estável e confiável.
      - Gerencia o uso real do software por parte dos usuários.
      - Deve ter alta segurança e desempenho.
 
-### Por Que Usar Diferentes Ambientes?
+### 🤔 **Por Que Usar Diferentes Ambientes?**
 
-**Segurança e Qualidade:** Separar o desenvolvimento, homologação e produção permite testar e corrigir problemas sem afetar o software que está em uso pelos usuários finais. Isso ajuda a garantir que as alterações e novos recursos sejam lançados com qualidade e sem riscos.
+**🔒 Segurança e Qualidade:** Separar o desenvolvimento, homologação e produção permite testar e corrigir problemas sem afetar o software que está em uso pelos usuários finais. Isso ajuda a garantir que as alterações e novos recursos sejam lançados com qualidade e sem riscos.
 
-**Desempenho e Eficiência:** Ambientes diferentes são otimizados para suas funções específicas. O ambiente de desenvolvimento é flexível para mudanças rápidas, o de homologação é estável para testes finais, e o de produção é otimizado para desempenho e segurança em uso real.
+**⚙️ Desempenho e Eficiência:** Ambientes diferentes são otimizados para suas funções específicas. O ambiente de desenvolvimento é flexível para mudanças rápidas, o de homologação é estável para testes finais, e o de produção é otimizado para desempenho e segurança em uso real.
 
-**Gerenciamento de Riscos:** Ao usar diferentes ambientes, você pode identificar e resolver problemas antes que eles impactem os usuários finais, reduzindo o risco de falhas e melhorando a experiência do usuário.
+**📉 Gerenciamento de Riscos:** Ao usar diferentes ambientes, você pode identificar e resolver problemas antes que eles impactem os usuários finais, reduzindo o risco de falhas e melhorando a experiência do usuário.
 
+---
 
-
-- **Ambiente de Desenvolvimento:** Focado na criação e teste do código. Flexível e instável.
-- **Ambiente de Homologação:** Focado na validação final antes do lançamento. Semelhante ao ambiente de produção.
-- **Ambiente de Produção:** O ambiente onde o software é acessível ao público. Deve ser estável e seguro.
+- **👩‍💻 Ambiente de Desenvolvimento:** Focado na criação e teste do código. Flexível e instável.
+- **🔍 Ambiente de Homologação:** Focado na validação final antes do lançamento. Semelhante ao ambiente de produção.
+- **🚀 Ambiente de Produção:** O ambiente onde o software é acessível ao público. Deve ser estável e seguro.
 
 Esses ambientes ajudam a garantir que o software seja bem desenvolvido, testado e lançado com qualidade, minimizando problemas e melhorando a experiência do usuário.
 
-## **Usos de uma variável de ambiente**
+---
 
-**Uma variável muda de acordo com o ambiente onde está rodando**, isso permite que ela aponte para um banco de dados de teste ou um banco de dados de produção apenas mudando o ponteiro de onde está rodando.
+## 💾 **Usos de uma Variável de Ambiente**
 
-**Outro fator importante é o fator de segurança**. Com variáveis de ambiente podemos ocultar informações sensíveis de nosso código, como credenciais, chaves de acesso, tokens, segredos, etc.
+**🔀 Uma variável muda de acordo com o ambiente onde está rodando,** isso permite que ela aponte para um banco de dados de teste ou um banco de dados de produção apenas mudando o ponteiro de onde está rodando.
 
-# **dotenv**
+**🔐 Outro fator importante é o fator de segurança.** Com variáveis de ambiente podemos ocultar informações sensíveis de nosso código, como credenciais, chaves de acesso, tokens, segredos, etc.
 
-O `dotenv` é uma biblioteca para Node.js que carrega variáveis de ambiente a partir de um arquivo `.env` para o `process.env`, facilitando a gestão de configurações e segredos sem precisar codificar essas informações diretamente no código fonte.
+---
 
-### **Como Usar o `dotenv` no NestJS**
+# 📦 **dotenv**
 
-#### **1. Instalação**
+O `dotenv` é uma biblioteca para Node.js que carrega variáveis de ambiente a partir de um arquivo `.env` para o `process.env`, facilitando a gestão de configurações e segredos sem precisar codificar essas informações diretamente no código-fonte.
+
+### 🚀 **Como Usar o `dotenv` no NestJS**
+
+#### 1️⃣ **Instalação**
 
 Primeiro, instale o `dotenv` e `@nestjs/config`, que é um pacote específico para integração de variáveis de ambiente no NestJS:
 
@@ -61,7 +65,7 @@ Primeiro, instale o `dotenv` e `@nestjs/config`, que é um pacote específico pa
 npm install @nestjs/config dotenv
 ```
 
-#### **2. Criar o Arquivo `.env`**
+#### 2️⃣ **Criar o Arquivo `.env`**
 
 Crie um arquivo `.env` na raiz do seu projeto. Este arquivo deve conter suas variáveis de ambiente no formato `CHAVE=valor`.
 
@@ -74,7 +78,7 @@ NODE_ENV=development
 PORT=3000
 ```
 
-#### **3. Configurar o `ConfigModule`**
+#### 3️⃣ **Configurar o `ConfigModule`**
 
 No arquivo `app.module.ts`, importe e configure o `ConfigModule` para carregar as variáveis do arquivo `.env`.
 
@@ -97,7 +101,7 @@ import { ConfigModule } from '@nestjs/config';
 export class AppModule {}
 ```
 
-#### **4. Acessar Variáveis de Ambiente**
+#### 4️⃣ **Acessar Variáveis de Ambiente**
 
 Utilize o `ConfigService` para acessar as variáveis de ambiente em seus serviços, controllers, ou qualquer outra parte da aplicação.
 
@@ -125,7 +129,7 @@ export class ExampleService {
 }
 ```
 
-#### **5. Utilizar em Outros Arquivos**
+#### 5️⃣ **Utilizar em Outros Arquivos**
 
 Você pode acessar variáveis de ambiente em qualquer parte do código que tenha acesso ao `ConfigService`.
 
@@ -147,17 +151,17 @@ async function bootstrap() {
 bootstrap();
 ```
 
-
-
 O `dotenv` facilita a configuração e o gerenciamento de variáveis de ambiente em projetos Node.js, incluindo projetos NestJS. Ele permite que você mantenha informações sensíveis e configurações fora do código-fonte e proporciona um ambiente de desenvolvimento mais limpo e flexível. Integrado com o `@nestjs/config`, você pode acessar essas variáveis em todo o seu aplicativo de forma prática e organizada.
 
-# Swagger
+---
+
+# 📚 **Swagger**
 
 O Swagger é uma ferramenta popular para documentar APIs RESTful. Ele fornece uma interface gráfica interativa para explorar e testar os endpoints da API, além de gerar documentação legível para os desenvolvedores. No contexto do NestJS, você pode integrar o Swagger para documentar e testar sua API de maneira eficaz.
 
-### **Como Integrar o Swagger no NestJS**
+### 🌐 **Como Integrar o Swagger no NestJS**
 
-#### **1. Instalar Dependências**
+#### 1️⃣ **Instalar Dependências**
 
 Para começar, você precisa instalar os pacotes necessários:
 
@@ -165,7 +169,7 @@ Para começar, você precisa instalar os pacotes necessários:
 npm install @nestjs/swagger swagger-ui-express
 ```
 
-#### **2. Configurar o Swagger no `main.ts`**
+#### 2️⃣ **Configurar o Swagger no `main.ts`**
 
 Adicione a configuração do Swagger no arquivo `main.ts`, onde a aplicação NestJS é inicializada.
 
@@ -198,7 +202,7 @@ bootstrap();
 
 Neste exemplo, o Swagger será acessível em `http://localhost:3000/api`.
 
-#### **3. Adicionar Decoradores ao Código**
+#### 3️⃣ **Adicionar Decoradores ao Código**
 
 Para que o Swagger documente seus endpoints corretamente, utilize os decoradores fornecidos pelo pacote `@nestjs/swagger` em seus controllers e DTOs.
 
@@ -233,18 +237,23 @@ export class CreateCatDto {
   @ApiProperty({ example: 3, description: 'Idade do gato' })
   age: number;
 
+
+
   @ApiProperty({ example: 'black', description: 'Cor do gato' })
   color: string;
 }
 ```
 
-#### **4. Verificar a Documentação**
+#### 4️⃣ **Verificar a Documentação**
 
 Após iniciar o servidor, acesse a URL onde o Swagger foi configurado (por exemplo, `http://localhost:3000/api`). Você verá uma interface gráfica que permite explorar e testar os endpoints da API documentados.
 
 O Swagger é uma excelente ferramenta para criar documentação interativa e explorar APIs. Integrar o Swagger no NestJS envolve a instalação dos pacotes necessários, configuração no arquivo `main.ts`, e o uso de decoradores para documentar endpoints e DTOs. Isso proporciona uma maneira visual e interativa para desenvolvedores interagirem com a API, o que pode ser especialmente útil durante o desenvolvimento e testes.
+
 ![Demonstração Swagger](../NestShopPro/src/public/img/swagger.gif)
 
+---
+# 🛤️ Railway
 ## 🚀 **Passo a Passo para Deploy no Railway**
 
 ### 🧐 **O que é Deploy?**
@@ -271,20 +280,10 @@ O Swagger é uma excelente ferramenta para criar documentação interativa e exp
 ### 3️⃣ **Configurar Variáveis de Ambiente no Railway**
 
 1. No dashboard do Railway, vá até a aba **Variables** do seu projeto.
+2. Adicione suas variáveis de ambiente, como:
 
-2. Adicione suas variáveis de ambiente, como 
-
-   ```
-   DATABASE_URL
-   ```
-
-   , 
-
-   ```
-   PORT
-   ```
-
-   , entre outras que sua aplicação necessita.
+   - `DATABASE_URL`
+   - `PORT`
 
    - Exemplo:
      - `DATABASE_URL=postgres://user:password@host:port/database`
@@ -303,16 +302,25 @@ O Swagger é uma excelente ferramenta para criar documentação interativa e exp
 1. Após o deploy, o Railway fornecerá uma URL onde sua aplicação estará disponível online.
 2. Teste a aplicação acessando essa URL para garantir que tudo esteja funcionando conforme o esperado.
 
-## 🎉 Parabéns! Agora você consegue!
-Você chegou ao fim deste guia e agora tem todas as ferramentas necessárias para configurar ambientes, gerenciar variáveis de ambiente, integrar o Swagger, e fazer o deploy da sua aplicação no Railway! 🚀
+---
 
-Com esses conhecimentos, você está pronta para levar sua aplicação para o próximo nível e compartilhar seu trabalho com o mundo. Não se esqueça de testar tudo, explorar as possibilidades e continuar aprimorando suas habilidades.
+## 🎉 **Parabéns! Agora vocês conseguem!**
 
-Boa sorte e continue criando! 💪✨
+Vocês chegaram ao fim deste guia e agora têm todas as ferramentas necessárias para configurar ambientes, gerenciar variáveis de ambiente, integrar o Swagger, e fazer o deploy da sua aplicação no Railway! 🚀
 
-Vamos reprogramar o mundo e construir um futuro melhor, uma linha de código por vez! 🌍💻
+Com esses conhecimentos, vocês estão prontas para levar suas aplicações para o próximo nível e compartilhar seu trabalho com o mundo. Não se esqueçam de testar tudo, explorar as possibilidades e continuar aprimorando suas habilidades.
 
-Com carinho,
-Professora Jenifer Plácido
+**Boa sorte e continuem criando!** 💪✨
+
+Vamos juntas **reprogramar o mundo** e construir um futuro melhor, uma linha de código por vez! 🌍💻
+
+---
+
+### **Com carinho, ❤️**
+
+**Professora Jenifer Plácido 👩🏾‍💻💻** 
 
 Essa foi a nossa última aula, mas o aprendizado continua. Vocês estão prontas para grandes conquistas. Foi um prazer ensinar e aprender com cada uma de vocês. ✨
+
+---
+
